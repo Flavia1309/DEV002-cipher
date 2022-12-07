@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-      <h1>Hello world!</h1>
-    </div>
-    <script src="index.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Caesar Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main id="root">
+    <header>
+      <h1><b><i>Bienvenidos a tu página de cifrado</i></b></h1>
+      <p><i>Introduce tu mensaje para cifrar</i></p>
+    </header>
+  </main>
+  <form>
+    <label for="mensaje">Introduce tu mensaje</label><br />
+    <input type="text" id="mensaje" name="mensaje" placeholder="Introduce tu mensaje" /><br />
+
+    <input type="number" name="número" value="26" min="1" max="40" step="1" /><br />
+
+    <label for="resultado">Resultado del cifrado</label><br />
+    <input type="text" id="resultado" name="resultado" placeholder="Resultado del cifrado" /><br />
+
+    <input type="submit" value="Enviar" />
+  </form>
+  <script src="index.js" type="module"></script>
+</body>
+
 </html>
