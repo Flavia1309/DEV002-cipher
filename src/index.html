@@ -8,24 +8,35 @@
 </head>
 
 <body>
-  <main id="root">
-    <header>
+ <header>
       <h1><b><i>Bienvenidos a tu página de cifrado</i></b></h1>
       <p><i>Introduce tu mensaje para cifrar</i></p>
     </header>
-  </main>
-  <form>
+  <main id="root">
+
+  <form id="Encriptar">
     <label for="mensaje">Introduce tu mensaje</label><br />
+
     <input type="text" id="mensaje" name="mensaje" placeholder="Introduce tu mensaje" /><br />
 
-    <input type="number" name="número" value="26" min="1" max="20" step="1" /><br />
+    <input type="number" id="offset" name="número" value="20" min="1" max="20" step="1" /><br />
 
+    <input type="submit" value="Encriptar" id="btnEncriptar"  /></br>
+
+  </form>
+
+
+  <form>
+    
     <label for="resultado">Resultado del cifrado</label><br />
+
     <input type="text" id="resultado" name="resultado" placeholder="Resultado del cifrado" /><br />
 
+    <input type="submit" value="Desencriptar" id="btnDesencriptar"/><br />
 
-    <input type="submit" value="Enviar" />
+    
   </form>
+ </main>
   <script src="index.js" type="module"></script>
 </body>
 
