@@ -1,40 +1,41 @@
 /*Agrego mi a mi constante cipher una funcion con offset que es el numero de desplazamientos y string que es mi abecedario*/
 const cipher = {
   encode: function(offset, string) {
-    if(typeof offset !== "number" || typeof string !== "string"){
-      throw new TypeError();
+    console.log(typeof offset)
+    if (typeof offset !== "string" || typeof string !== "string"){
+     // throw new TypeError();
     }
     let resultado = "";
-    for (let i = 0; i < string.length; i++){
+    for (let i = 0; i < string.length; i++) {
       let encriptado = string.charCodeAt(i);
-      let cifrado;
-      if (encriptado < 65 || encriptado > 90){
-        cifrado = String.fromCharCode(encriptado);
-        resultado += cifrado;
+      let desencriptar;
+      if (encriptado < 65 || desencriptar > 90){
+        desencriptar = String.fromCharCode(encriptado);
+        resultado += desencriptar;
       } else {
         let mensajeEncriptado = (encriptado - 65 + offset) % 26 + 65;
-        cifrado = String.fromCharCode(mensajeEncriptado);
-        resultado = resultado + cifrado;
+        desencriptar = String.fromCharCode(mensajeEncriptado);
+        resultado = resultado + desencriptar;
       }
     }
     return resultado;
   },
 
   decode: function(offset, string) {
-    if(typeof offset !== "number" || typeof string !== "string"){
-      throw new TypeError();
+    if(typeof offset !== "string" || typeof string !== "string"){
+     // throw new TypeError();
     }
     let resultado = "";
     for (let i = 0; i < string.length; i++) {
       let encriptado = string.charCodeAt(i);
-      let cifrado;
+      let desencriptar;
       if(encriptado < 65 || encriptado > 90){
-        cifrado = String.fromCharCode(encriptado);
-        resultado += cifrado;
+        desencriptar = String.fromCharCode(encriptado);
+        resultado += desencriptar;
       } else {
         let mensajeEncriptado = (encriptado - 90 - offset) % 26 + 90;
-        cifrado = String.fromCharCode(mensajeEncriptado);
-        resultado = resultado + cifrado;
+        desencriptar = String.fromCharCode(mensajeEncriptado);
+        resultado = resultado + desencriptar;
       }
     }
     return resultado;
