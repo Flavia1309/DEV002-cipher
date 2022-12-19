@@ -9,7 +9,7 @@ const cipher = {
     for (let i = 0; i < string.length; i++) {
       let encriptado = string.charCodeAt(i);
       let desencriptar;
-      if (encriptado < 65 || desencriptar > 90){
+      if (encriptado < 65 || desencriptar > 90) {
         desencriptar = String.fromCharCode(encriptado);
         resultado += desencriptar;
       } else {
@@ -23,7 +23,7 @@ const cipher = {
 
   decode: function(offset, string) {
     if(typeof offset !== "string" || typeof string !== "string"){
-     // throw new TypeError();
+      //throw new TypeError();
     }
     let resultado = "";
     for (let i = 0; i < string.length; i++) {
