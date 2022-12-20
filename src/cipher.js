@@ -9,14 +9,13 @@ const cipher = {
     for (let i = 0; i < string.length; i++) {
       let encriptar = string.charCodeAt(i);
       if (encriptar >= 65 || encriptar <= 90) {
-        resultado += String.fromCharCode(((encriptar - 65 +  parseInt( offset)) % 26) + 65)
+        resultado += String.fromCharCode(((encriptar - 65 + ( offset)) % 26) + 65)
       }
     }
     return resultado;
   },
 
   decode: function (offset, string) {
-    console.log(typeof offset);
     if ( offset !== null || typeof string !== "string") {
       //throw new TypeError();
     }
