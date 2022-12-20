@@ -3,7 +3,7 @@ const cipher = {
   encode: function (offset, string) {
     console.log(offset);
     console.log(typeof offset);
-    if (typeof offset !== "number" || typeof string !== "string") {
+    if (offset !== null || typeof string !== "string") {
       //throw new TypeError("Error de parámetro");
     }
     let resultado = "";
@@ -19,7 +19,7 @@ const cipher = {
 
   decode: function (offset, string) {
     console.log(typeof offset);
-    if (typeof offset !== "number" || typeof string !== "string") {
+    if ( offset !== null || typeof string !== "string") {
       //throw new TypeError();
     }
     let resultado = "";
