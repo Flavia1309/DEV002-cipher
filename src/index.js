@@ -16,8 +16,8 @@ formDesencriptar.addEventListener("submit", (e)=> {
     e.preventDefault();
     const offset = document.getElementById("offset").value
     const mensaje = document.getElementById("mensaje").value
-    let result = cipher.decode(parseInt (offset), mensaje)
-    console.log(result);
+    resultado.value = cipher.decode(parseInt (offset), mensaje)
+    console.log(resultado);
 })
     //console.log(cipher);
     
