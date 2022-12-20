@@ -4,9 +4,8 @@ const cipher = {
     if (typeof offset !== "number" || typeof string !== "string"){
       throw new TypeError();
     }
-
     let resultado = "";
-  for(let i = 0; i<string.length; i++) {
+  for(let i = 0; i < string.length; i++) {
     let encriptar = string.charCodeAt(i);
 if (encriptar >= 65 || encriptar <= 90) {
   resultado += String.fromCharCode(((encriptar - 65 + (offset)) % 26) + 65);
