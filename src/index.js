@@ -1,23 +1,23 @@
 import cipher from './cipher.js';
 
-//const resultado = document.getElementById("resultado");
+const resultado = document.getElementById("resultado");
 
 let formEncriptar = document.getElementById("Encriptar");
 formEncriptar.addEventListener("submit",(e)=> {
     e.preventDefault();
     const offset = document.getElementById("offset").value
     const mensaje = document.getElementById("mensaje").value
-    const resultado = cipher.encode(offset, mensaje)
+    resultado.value = cipher.encode(offset, mensaje)
     console.log(resultado);
 })
 
-let formDesencriptar= document.getElementById("Desencriptar");
+let formDesencriptar = document.getElementById("Desencriptar");
 formDesencriptar.addEventListener("submit", (e)=> {
     e.preventDefault();
     const offset = document.getElementById("offset").value
     const mensaje = document.getElementById("mensaje").value
-    const resultado = cipher.decode(offset, mensaje)
-    console.log(resultado);
+    let result = cipher.decode(offset, mensaje)
+    console.log(result);
 })
     //console.log(cipher);
     
