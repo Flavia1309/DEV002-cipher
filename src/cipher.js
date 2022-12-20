@@ -1,8 +1,6 @@
 /*Agrego mi a mi constante cipher una funcion con offset que es el numero de desplazamientos y string que es mi abecedario*/
 const cipher = {
   encode: function (offset, string) {
-    console.log(offset);
-    console.log(typeof offset);
     if (offset !== null || typeof string !== "string") {
       //throw new TypeError("Error de parámetro");
     }
