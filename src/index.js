@@ -1,33 +1,25 @@
 import cipher from './cipher.js';
-//console.log('Prueba de log')
-//console.log(cipher.encode);
-//const number = document.getElementById("number");
-const resultado = document.getElementById("resultado");
-// const submit = e => {
-//     e.preventDefault();
-//     resultado.innerHTML = '';
-// }
-//mensaje.onsubmit = submit;
 
-// Obtener el boton para encriptar
-// let btnEncriptar = document.getElementById("btnEncriptar");
+//const resultado = document.getElementById("resultado");
+
 let formEncriptar = document.getElementById("Encriptar");
-formEncriptar.addEventListener("submit", (e)=>  {
+formEncriptar.addEventListener("submit",(e)=> {
     e.preventDefault();
     const offset = document.getElementById("offset").value
     const mensaje = document.getElementById("mensaje").value
-    resultado.value = cipher.encode(offset, mensaje)
-    //console.log(resultado);
-})
-let formDesencriptar= document.getElementById("Desencriptar");
-formDesencriptar.addEventListener("submit", (e)=>  {
-    e.preventDefault();
-    const offset = document.getElementById("offset").value
-    const mensaje = document.getElementById("mensaje").value
-    resultado.value = cipher.decode(offset, mensaje)
+    const resultado = cipher.encode(offset, mensaje)
     console.log(resultado);
 })
-    console.log(cipher);
+
+let formDesencriptar= document.getElementById("Desencriptar");
+formDesencriptar.addEventListener("submit", (e)=> {
+    e.preventDefault();
+    const offset = document.getElementById("offset").value
+    const mensaje = document.getElementById("mensaje").value
+    const resultado = cipher.decode(offset, mensaje)
+    console.log(resultado);
+})
+    //console.log(cipher);
     
 
 /* agrego un sonido de click para los eventos del boton para que ejecute una acción
