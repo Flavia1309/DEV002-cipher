@@ -1,25 +1,27 @@
 import cipher from './cipher.js';
 
-const resultado = document.getElementById("resultado");
 
-let formEncriptar = document.getElementById("Encriptar");
-formEncriptar.addEventListener("submit",(e)=> {
+document.getElementById("btnEncriptar").addEventListener("click", (e) => {
     e.preventDefault();
     const offset = document.getElementById("offset").value
-    const mensaje = document.getElementById("mensaje").value
-    resultado.value = cipher.encode(parseInt (offset), mensaje)
-    //console.log(resultado);
+    const mensaje = document.getElementById("mensajeOriginal").value
+    const resultado = cipher.encode(parseInt (offset), mensaje)
+
+    document.getElementById("mensajeResultado").value = resultado;
+
 })
 
-let formDesencriptar = document.getElementById("Desencriptar");
-formDesencriptar.addEventListener("submit", (e)=> {
+document.getElementById("btnDesencriptar").addEventListener("click", (e) => {
     e.preventDefault();
     const offset = document.getElementById("offset").value
-    const mensaje = document.getElementById("mensaje").value
-    resultado.value = cipher.decode(parseInt (offset), mensaje)
-    //console.log(resultado);
+    const mensaje = document.getElementById("mensajeResultado").value
+    const resultado = cipher.decode(parseInt (offset), mensaje)
+    print(resultado);
+
+    document.getElementById("mensajeFinal").value = resultado;
+
 })
-    //console.log(cipher);
+
     
 
 /* agrego un sonido de click para los eventos del boton para que ejecute una acción

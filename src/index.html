@@ -18,11 +18,11 @@
   <form id="Encriptar">
     <label for="mensaje">Introduce tu mensaje</label><br />
 
-    <input type="text" id="mensaje" name="mensaje" placeholder="Introduce tu mensaje" /><br />
+    <input type="text" id="mensajeOriginal" name="mensajeOriginal" placeholder="Introduce tu mensaje" /><br />
 
     <input type="number" id="offset" name="número" value="20" min="1" max="20" step="1" /><br />
 
-    <input type="submit" value="Encriptar" id="btnEncriptar"  /><br>
+    <input type="button" value="Encriptar" id="btnEncriptar"  /><br>
 
   </form>
 
@@ -31,13 +31,14 @@
     
     <label for="resultado">Resultado del cifrado</label><br />
 
-    <input type="text" id="resultado" name="resultado" placeholder="Resultado del cifrado" /><br />
+    <input type="text" id="mensajeResultado" name="mensajeResultado" placeholder="Resultado del cifrado" /><br />
 
-    <input type="submit" value="Desencriptar" id="btnDesencriptar"/><br />
+    <input type="button" value="Desencriptar" id="btnDesencriptar" /><br />
+
+    <input type="text" id="mensajeFinal" name="mensajeFinal" placeholder="Resultado del cifrado" /><br />
 
     <!--<input for="desencriptado2" id="desencriptado2" name="desencriptado2" placeholder="Desencriptado"/><br />-->
 
-    
   </form>
  </main>
   <script src="index.js" type="module"></script>
