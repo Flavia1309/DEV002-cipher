@@ -16,7 +16,6 @@ document.getElementById("btnDesencriptar").addEventListener("click", (e) => {
     const offset = document.getElementById("offset").value
     const mensaje = document.getElementById("mensajeResultado").value
     const resultado = cipher.decode(parseInt (offset), mensaje)
-    print(resultado);
 
     document.getElementById("mensajeFinal").value = resultado;
 
